@@ -1,4 +1,4 @@
-# 💥 Desktop Breaker Ultra (Alpha v0.1)
+# 💥 Desktop Breaker Ultra (Alpha v0.2)
 
 ![Language](https://shields.io)
 ![Library](https://shields.io)
@@ -62,7 +62,7 @@ set_icon.exe
 
 ### 🤝 Contributing (Help Wanted!)
 
-This project is currently in **Alpha v0.1** and was created in a vibe-coding session. If you'd like to improve it, here are some great starting points:
+This project is currently in **Alpha v0.2** and was created in a vibe-coding session. If you'd like to improve it, here are some great starting points:
 * 🚀 **Water Physics Optimization:** Improve the 4-thread SPH solver (`water.h` / `addons.h`) to handle 15,000+ particles at locked 60 FPS even when compiled without `-O3`.
 * 🖥️ **Multi-Monitor Support:** Extend screen capture and tile grid across multiple displays.
 * 🐧 **Cross-Platform Port:** Add Linux (X11/Wayland) screen capture fallback.
@@ -71,7 +71,7 @@ This project is currently in **Alpha v0.1** and was created in a vibe-coding ses
 ---
 ---
 
-# 💥 Desktop Breaker Ultra (Alpha v0.1)
+# 💥 Desktop Breaker Ultra (Alpha v0.2)
 
 **Desktop Breaker Ultra** — это фановая физическая песочница-разрушитель рабочего стола, написанная на чистом **C + Raylib**. Программа делает снимок твоего рабочего стола и превращает его в разрушаемую площадку с 9 видами оружия, процедурным синтезатором звука (без внешних аудиофайлов), многопоточной водой на 4 ядра и GLSL-шейдером оптического преломления.
 
@@ -127,7 +127,7 @@ set_icon.exe
 
 ### 🤝 Как помочь проекту (Contributing)
 
-Проект находится в стадии **Alpha v0.1**. Буду рад любым идеям и Pull Request'ам, особенно по следующим задачам:
+Проект находится в стадии **Alpha v0.2**. Буду рад любым идеям и Pull Request'ам, особенно по следующим задачам:
 * 🚀 **Оптимизация физики воды:** ускорение 4-поточного SPH-солвера (`water.h` / `addons.h`), чтобы 15 000+ частиц работали в стабильных 60 FPS при заполнении всего монитора.
 * 🖥️ **Поддержка нескольких мониторов:** захват и разрушение сразу всех подключённых экранов.
 * 🔫 **Новые пушки:** замораживающий луч, портальная пушка или землетрясение в виде отдельных `.h`-модулей.
