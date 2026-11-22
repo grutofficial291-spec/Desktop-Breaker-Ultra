@@ -6,9 +6,9 @@
 ![Status](https://shields.io)
 ![PRs Welcome](https://shields.io)
 
-> 🇷🇺 **[Русская версия описания находится ниже](#-desktop-breaker-ultra-alpha-v01-1)**
+> 🇷🇺 **[Русская версия описания находится ниже](#-desktop-breaker-ultra-alpha-v02-1)**
 
-**Desktop Breaker Ultra** is a lightweight, chaotic desktop destruction sandbox written in pure **C + Raylib**. It captures your live Windows desktop and turns it into a destructible physics playground with 9 weapons, procedural real-time audio synthesis, multi-threaded SPH fluid simulation, and custom GLSL refraction shaders.
+**Desktop Breaker Ultra** is a lightweight, chaotic desktop destruction sandbox written in pure **C + Raylib**. It captures your live Windows desktop and turns it into a destructible physics playground with 9 weapons, procedural real-time audio synthesis, a 4-core Eulerian grid fluid simulation (up to 28,000 particles), and custom GLSL optical refraction shaders.
 
 *(Built via vibe-coding — contributions, optimizations, and Pull Requests are very welcome!)*
 
@@ -26,7 +26,7 @@
 | **`6`** | **Tsar Bomba (Nuke)** | Drops from the sky with a falling whistle, white flash, and mushroom cloud. |
 | **`7`** | **Railgun** | Pierces the entire screen in a straight line with a hyper-velocity plasma bolt. |
 | **`8`** | **Meteor Shower** | Calls down flaming meteors from above. |
-| **`9`** | **Live Water (4-Core)** | Multi-threaded SPH water (up to 10,000 particles) with a **GLSL optical refraction shader** that bends icons underneath and bounces off desktop shortcuts. |
+| **`9`** | **Live Water (4-Core)** | Fast 4-thread grid fluid (**up to 28,000 particles at 60 FPS**) with a **GLSL optical refraction shader** that bends icons underneath and fills the entire monitor. |
 
 ### ⌨️ Controls & Prank Hotkeys
 
@@ -63,7 +63,7 @@ set_icon.exe
 ### 🤝 Contributing (Help Wanted!)
 
 This project is currently in **Alpha v0.2** and was created in a vibe-coding session. If you'd like to improve it, here are some great starting points:
-* 🚀 **Water Physics Optimization:** Improve the 4-thread SPH solver (`water.h` / `addons.h`) to handle 15,000+ particles at locked 60 FPS even when compiled without `-O3`.
+* 🔊 **Procedural Water Audio:** Add dynamic splash and wave sound synthesis to `AudioCb` when pouring water.
 * 🖥️ **Multi-Monitor Support:** Extend screen capture and tile grid across multiple displays.
 * 🐧 **Cross-Platform Port:** Add Linux (X11/Wayland) screen capture fallback.
 * 🔫 **New Weapons:** Add a freeze ray, portal gun, or earthquake tool via modular `.h` hooks!
@@ -73,7 +73,7 @@ This project is currently in **Alpha v0.2** and was created in a vibe-coding ses
 
 # 💥 Desktop Breaker Ultra (Alpha v0.2)
 
-**Desktop Breaker Ultra** — это фановая физическая песочница-разрушитель рабочего стола, написанная на чистом **C + Raylib**. Программа делает снимок твоего рабочего стола и превращает его в разрушаемую площадку с 9 видами оружия, процедурным синтезатором звука (без внешних аудиофайлов), многопоточной водой на 4 ядра и GLSL-шейдером оптического преломления.
+**Desktop Breaker Ultra** — это фановая физическая песочница-разрушитель рабочего стола, написанная на чистом **C + Raylib**. Программа делает снимок твоего рабочего стола и превращает его в разрушаемую площадку с 9 видами оружия, процедурным синтезатором звука (без внешних аудиофайлов), быстрой 4-поточной водой (до 28 000 частиц) и GLSL-шейдером оптического преломления.
 
 *(Проект создан в формате вайб-кодинга — любые улучшения кода, оптимизации и Pull Request'ы горячо приветствуются!)*
 
@@ -91,7 +91,7 @@ This project is currently in **Alpha v0.2** and was created in a vibe-coding ses
 | **`6`** | **Царь-бомба (Ядерный удар)** | Падает сверху со свистом, ослепляет экран вспышкой и поднимает ядерный гриб. |
 | **`7`** | **Рельсотрон** | Мгновенно прошивает весь экран насквозь сверхмощным плазменным зарядом. |
 | **`8`** | **Метеоритный дождь** | Обрушивает с неба раскалённые метеориты. |
-| **`9`** | **Живая вода (4 ядра)** | Многопоточная жидкость (до 10 000 частиц) с **GLSL-шейдером преломления**, которая искажает ярлыки под собой и отскакивает от иконок рабочего стола. |
+| **`9`** | **Живая вода (4 ядра)** | Быстрая многопоточная жидкость (**до 28 000 частиц в 60 FPS**) с **GLSL-шейдером преломления**, которая искажает ярлыки под собой и позволяет затопить весь монитор. |
 
 ### ⌨️ Управление и горячие клавиши
 
@@ -128,6 +128,6 @@ set_icon.exe
 ### 🤝 Как помочь проекту (Contributing)
 
 Проект находится в стадии **Alpha v0.2**. Буду рад любым идеям и Pull Request'ам, особенно по следующим задачам:
-* 🚀 **Оптимизация физики воды:** ускорение 4-поточного SPH-солвера (`water.h` / `addons.h`), чтобы 15 000+ частиц работали в стабильных 60 FPS при заполнении всего монитора.
+* 🔊 **Процедурный звук воды:** добавление генерации звука плеска и волн в `AudioCb`.
 * 🖥️ **Поддержка нескольких мониторов:** захват и разрушение сразу всех подключённых экранов.
 * 🔫 **Новые пушки:** замораживающий луч, портальная пушка или землетрясение в виде отдельных `.h`-модулей.
